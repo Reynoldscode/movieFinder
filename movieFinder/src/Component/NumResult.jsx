@@ -1,10 +1,9 @@
-export default function NumResult() {
+export default function NumResult({ movies }) {
   return (
     <>
-      <div className="logo">
-        <span role="img">🍿</span>
-        <h1>MovieFinder</h1>
-      </div>
+      <p className="num-result">
+        Found <strong>{movies.length}</strong> results
+      </p>
     </>
   );
 }

@@ -1,7 +1,13 @@
+import { useState } from "react";
+import { tempMovieData } from "./data";
+import NavBar from "./Component/NavBar";
+import Main from "./Component/Main";
 export default function App() {
+  const [movies, setMovies] = useState(tempMovieData);
   return (
     <>
-      <h1>MovieFinder2.2</h1>
+      <NavBar movies={movies} />
+      <Main movies={movies} />
     </>
   );
 }
